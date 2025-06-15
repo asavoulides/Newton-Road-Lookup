@@ -80,11 +80,8 @@ class StreetSearchApp:
 # Run the application
 if __name__ == "__main__":
     json_file = "roads.json"
-    try:
-        street_names = load_street_names(json_file)
-    except FileNotFoundError as e:
-        print(e)
-        street_names = []
+    street_names = load_street_names(json_file)
+
 
     root = tk.Tk()
     app = StreetSearchApp(root, street_names)
